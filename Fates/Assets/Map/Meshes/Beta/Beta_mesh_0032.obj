@@ -1,0 +1,49 @@
+﻿# Tiled2Unity generated file. Do not modify by hand.
+# Wavefront file for 'Beta_mesh_0032.obj'
+
+# Vertices (Count = 24)
+v -54 -12 0
+v -55 -12 0
+v -55 -11 0
+v -54 -11 0
+v -58 -13 0
+v -59 -13 0
+v -59 -12 0
+v -58 -12 0
+v -70 -25 0
+v -71 -25 0
+v -71 -24 0
+v -70 -24 0
+v -53 -56 0
+v -54 -56 0
+v -54 -55 0
+v -53 -55 0
+v -87 -65 0
+v -88 -65 0
+v -88 -64 0
+v -87 -64 0
+v -66 -75 0
+v -67 -75 0
+v -67 -74 0
+v -66 -74 0
+
+# Texture cooridinates (Count = 4)
+vt 0 0
+vt 1 0
+vt 1 1
+vt 0 1
+
+# Normal
+vn 0 0 -1
+
+# Mesh description
+g Beta_mesh_0032
+
+# Faces
+f 1/1/1 2/2/1 3/3/1 4/4/1
+f 5/1/1 6/2/1 7/3/1 8/4/1
+f 9/1/1 10/2/1 11/3/1 12/4/1
+f 13/1/1 14/2/1 15/3/1 16/4/1
+f 17/1/1 18/2/1 19/3/1 20/4/1
+f 21/1/1 22/2/1 23/3/1 24/4/1
+
