@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class Move_Makaka : MonoBehaviour {
 
 	private float speed;
+	public int HP;
 	private Animator anim;
  	private Transform Player;
  	private float aggroDistance;
@@ -17,18 +18,19 @@ public class Move_Makaka : MonoBehaviour {
 
  	void Start () 
 	{ 
+		HP = 100;
 		Delay = StartDelay;
 		anim = GetComponent<Animator>();
 		Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 		speed = 3f;
 		aggroDistance = 5f;
-		stopDistance = 1.7f;
+		stopDistance = 1.5f;
 	}
 	void Update() 
 	{ 
  		if (Vector2.Distance(transform.position, Player.position) <= 1.5f)
 		{
-			var p = Player.GetComponent<Main>();
+			var p = Player.GetComponent<Controller_Players>();
 			Delay -= Time.deltaTime;
 			Delay1 -= Time.deltaTime;
 			if(Delay1 > 0)
@@ -51,7 +53,10 @@ public class Move_Makaka : MonoBehaviour {
 		{ 
 			float x = transform.position.x;
 			float y = transform.position.y;
-			transform.position = Vector2.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
+			if(HP > 0)
+			{
+				transform.position = Vector2.MoveTowards(transform.position, Player.position, speed * Time.deltaTime);
+			}
 			if(transform.position.x > x){anim.SetFloat("X",1);}
 			else if(transform.position.x < x){anim.SetFloat("X",-1);}
 			if(transform.position.y > y){anim.SetFloat("Y",1);}
